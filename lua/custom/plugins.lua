@@ -24,7 +24,7 @@ local plugins = {
     end
   },
   {
-    "dreamsofcode-io/nvim-dap-go",
+    "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
     config = function(_, opts)
@@ -61,7 +61,10 @@ local plugins = {
         "mypy",
         "ruff",
         "pyright",
-        "gopls"
+        "gopls",
+        "lua-language-server",
+        "gofumpt",
+        "golangci-lint"
       },
     },
   },

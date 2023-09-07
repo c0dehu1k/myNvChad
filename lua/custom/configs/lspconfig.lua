@@ -28,3 +28,10 @@ lspconfig.gopls.setup {
     },
   },
 }
+
+lspconfig.tsserver.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "html", "css", "js", "ts"},
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+}

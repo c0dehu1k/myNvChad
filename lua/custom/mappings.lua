@@ -4,13 +4,19 @@ M.dap = {
   plugin = true,
   n = {
     ["<leader>db"] = {"<cmd> DapToggleBreakpoint <CR>"},
+    ["<leader>dc"] = {"<cmd> DapContinue <CR>"},
+    ["<leader>dn"] = {"<cmd> DapStepOver <CR>"},
+    ["<leader>di"] = {"<cmd> DapStepInto <CR>"},
+    ["<leader>do"] = {"<cmd> DapStepOut <CR>"},
+    ["<leader>dr"] = {"<cmd> DapToggleRepl <CR>"},
+    ["<leader>dt"] = {"<cmd> DapTerminate <CR>"},
     ["<leader>dus"] = {
       function ()
         local widgets = require('dap.ui.widgets');
         local sidebar = widgets.sidebar(widgets.scopes);
         sidebar.open();
       end,
-      "Open debugging sidebar"
+      "Open Dap UI"
     }
   }
 }
