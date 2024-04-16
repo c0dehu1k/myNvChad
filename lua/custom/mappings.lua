@@ -12,9 +12,9 @@ M.dap = {
     ["<leader>dt"] = {"<cmd> DapTerminate <CR>"},
     ["<leader>dus"] = {
       function ()
-        local widgets = require('dap.ui.widgets');
-        local sidebar = widgets.sidebar(widgets.scopes);
-        sidebar.open();
+        local dapui = require("dapui")
+        dapui.setup()
+        dapui.toggle()
       end,
       "Open Dap UI"
     }
